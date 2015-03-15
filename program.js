@@ -1,18 +1,23 @@
 var koa = require('koa');
 var parse = require('co-body');
+var fs = require('fs');
 
 var app = koa();
 
 
 app.use(function* (next){
-	if (this.method !== "POST") return yield next;
+	if (this.path !== "/json") return yield next;
 	
-	var body = yield parse(this, {limit: '1kb'});
+	this.body = {
+		foo: 'bar'
+	}
+		
+});
+
+app.use(function* (next){
+	if (this.path !== "/stream") return yield next;
 	
-	if (!body.name) this.throw(400, '.name required');
-	
-	this.body = body.name.toUpperCase();
-	
+	this.body = fs.createReadStream(process.argv[3]);
 });
 
 var port = process.argv[2];
