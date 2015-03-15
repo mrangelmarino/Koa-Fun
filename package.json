@@ -1,0 +1,40 @@
+{
+  "name": "kick-off-koa",
+  "version": "1.1.8",
+  "description": "An intro to koa via a set of self-guided workshops",
+  "main": "kick-off-koa.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "bin": {
+    "kick-off-koa": "kick-off-koa.js"
+  },
+  "keywords": [
+    "koa",
+    "workshop",
+    "node-school"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:koajs/kick-off-koa.git"
+  },
+  "author": "dead_horse <dead_horse@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors-tmpl": "^0.1.0",
+    "freeport": "^1.0.3",
+    "pedding": "^1.0.0",
+    "through2": "^0.5.1",
+    "urllib": "^0.5.16",
+    "workshopper": "^1.3.0",
+    "workshopper-exercise": "^1.1.0"
+  },
+  "devDependencies": {
+    "co-body": "^1.0.0",
+    "co-views": "^0.2.0",
+    "ejs": "^1.0.0",
+    "glob": "^4.0.5",
+    "koa": "^0.14.0",
+    "koa-session": "^3.0.0"
+  }
+}
